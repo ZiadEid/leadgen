@@ -1,0 +1,52 @@
+:root {
+  --main-color: #4e4e4e;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eee;
+}
+
+header nav .logo a {
+  outline: none;
+}
+
+header nav ul li {
+  font-size: 12px;
+  color: var(--main-color);
+}
+
+header nav .container > a {
+  font-size: 10px;
+}
+
+header nav .responsive-menu::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: calc(100%);
+  left: calc(100% - 13px);
+  border-width: 10px;
+  border-color: transparent transparent transparent white;
+  border-style: solid;
+  transform: rotate(45deg);
+  z-index: 40;
+}
+
+header nav .responsive-menu .menu-links {
+  top: calc(100% + 10px);
+  right: 3px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+header nav .responsive-menu:hover::before {
+  display: block;
+}
+
+header nav .responsive-menu:hover .menu-links {
+  display: flex !important;
+}
